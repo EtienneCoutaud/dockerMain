@@ -17,14 +17,11 @@ run apt-get install -y git maven
 # Clone project
 run git clone https://github.com/EtienneCoutaud/dockerMain.git
 
-# Build project
-run cd dockerMain
 
-run ls
+workdir dockerMain
 
 run mvn clean install
 
 # Expose the http port
 
-
-workdir dockerMain
+cmd ["java", "-jar", "target/dockerMainTest-jar-with-dependencies.jar"]
