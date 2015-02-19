@@ -21,6 +21,6 @@ run git clone https://github.com/EtienneCoutaud/dockerMain.git
 run cd dockerMain &amp;&amp; mvn verify dependency:copy-dependencies
 
 # Expose the http port
-expose 8080
+
 
 workdir dockerMain
