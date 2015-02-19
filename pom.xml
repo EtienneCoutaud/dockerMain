@@ -3,40 +3,10 @@
   <groupId>dockerMain</groupId>
   <artifactId>dockerMain</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-	<dependencies>
-		<dependency>
-			<groupId>com.sparkjava</groupId>
-			<artifactId>spark-core</artifactId>
-			<version>2.0.0</version>
-		</dependency>
-	</dependencies>
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-jar-plugin</artifactId>
-				<version>2.4</version>
-				<configuration>
-					<finalName>dockerMain</finalName>
-					<archive>
-						<manifest>
-							<addClasspath>true</addClasspath>
-							<mainClass>sparkexample.Hello</mainClass>
-							<classpathPrefix>dependency-jars/</classpathPrefix>
-						</manifest>
-					</archive>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.1</version>
-				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
-				</configuration>
-			</plugin>
-			<plugin>
+  <packaging>jar</packaging>
+	
+	<build><plugins>
+		<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-assembly-plugin</artifactId>
 				<executions>
@@ -46,19 +16,19 @@
 						</goals>
 						<phase>package</phase>
 						<configuration>
-							<finalName>dockerMain</finalName>
+							<finalName>dockerMainTest</finalName>
 							<descriptorRefs>
 								<descriptorRef>jar-with-dependencies</descriptorRef>
 							</descriptorRefs>
 							<archive>
 								<manifest>
-									<mainClass>sparkexample.Hello</mainClass>
+									<mainClass>dockerMain.mainDocker</mainClass>
 								</manifest>
 							</archive>
 						</configuration>
 					</execution>
 				</executions>
 			</plugin>
-		</plugins>
-	</build>
+    </plugins></build>
+    
 </project>
