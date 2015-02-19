@@ -20,6 +20,8 @@ run git clone https://github.com/EtienneCoutaud/dockerMain.git
 # Build project
 run cd dockerMain
 
+run ls
+
 run mvn clean install
 
 # Expose the http port
