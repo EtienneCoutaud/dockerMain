@@ -2,8 +2,8 @@ from dockerfile/java:oracle-java8
 maintainer Etienne Coutaud;
 
 # Install prerequisites
-#run apt-get update
-#run apt-get install -y software-properties-common
+run apt-get update
+run apt-get install -y software-properties-common
 
 # Install java8
 #run add-apt-repository -y ppa:webupd8team/java
