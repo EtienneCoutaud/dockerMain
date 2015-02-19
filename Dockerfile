@@ -1,4 +1,4 @@
-from base
+from dgageot/java8
 maintainer Etienne Coutaud;
 
 # Install prerequisites
