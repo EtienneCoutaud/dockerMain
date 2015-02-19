@@ -1,4 +1,4 @@
-from dgageot/java8
+from ubuntu
 maintainer Etienne Coutaud;
 
 # Install prerequisites
