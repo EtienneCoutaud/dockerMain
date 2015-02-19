@@ -17,7 +17,7 @@
 				<artifactId>maven-jar-plugin</artifactId>
 				<version>2.4</version>
 				<configuration>
-					<finalName>sparkexample</finalName>
+					<finalName>dockerMain</finalName>
 					<archive>
 						<manifest>
 							<addClasspath>true</addClasspath>
@@ -46,7 +46,7 @@
 						</goals>
 						<phase>package</phase>
 						<configuration>
-							<finalName>sparkexample</finalName>
+							<finalName>dockerMain</finalName>
 							<descriptorRefs>
 								<descriptorRef>jar-with-dependencies</descriptorRef>
 							</descriptorRefs>
