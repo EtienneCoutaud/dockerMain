@@ -18,7 +18,9 @@ run apt-get install -y git maven
 run git clone https://github.com/EtienneCoutaud/dockerMain.git
 
 # Build project
-run cd dockerMain &amp;&amp; mvn verify dependency:copy-dependencies
+run cd dockerMain
+
+run mvn clean install
 
 # Expose the http port
 
