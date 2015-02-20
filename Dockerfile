@@ -14,6 +14,10 @@ run apt-get install -y software-properties-common
 # Install tools
 run apt-get install -y git maven
 
+RUN apt-get install openssh-server -y
+RUN mkdir -p /var/run/sshd
+EXPOSE 22
+
 # Clone project
 run git clone https://github.com/EtienneCoutaud/dockerMain.git
 
@@ -23,5 +27,6 @@ workdir dockerMain
 run mvn clean install
 
 # Expose the http port
+
 
 cmd ["java", "-jar", "target/dockerMainTest-jar-with-dependencies.jar"]
